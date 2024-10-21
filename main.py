@@ -2,6 +2,7 @@ from textsummarizer.pipeline.stage_01_data_ingestion import DataIngestionTrainin
 from textsummarizer.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from textsummarizer.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 from textsummarizer.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
+from textsummarizer.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 from textsummarizer.logging import logger
 
 def execute_stage(stage_name, pipeline_class):
@@ -19,4 +20,4 @@ execute_stage("Data Ingestion", DataIngestionTrainingPipeline)
 execute_stage("Data Validation", DataValidationTrainingPipeline)
 execute_stage("Data Transformation", DataTransformationTrainingPipeline)
 execute_stage("Model Trainer", ModelTrainerTrainingPipeline)
-#execute_stage("Model Evaluation", ModelEvaluationTrainingPipeline)
+execute_stage("Model Evaluation", ModelEvaluationTrainingPipeline)
